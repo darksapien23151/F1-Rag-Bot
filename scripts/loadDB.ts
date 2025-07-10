@@ -25,7 +25,7 @@ const splitter = new RecursiveCharacterTextSplitter({
 const createCollection = async (similaritymetric: SimilarityMetric = "dot_product") => {
   const res = await db.createCollection(ASTRA_DB_COLLECTION, {
     vector: {
-      dimension: 384, // Adjust based on Hugging Face embedding dimensions
+      dimension: 384, 
       metric: similaritymetric,
     },
   });
