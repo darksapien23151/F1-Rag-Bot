@@ -97,7 +97,7 @@ const getHuggingFaceEmbedding = async (text: string) => {
       throw new Error(`Hugging Face API Error: ${response.data.error}`);
     }
 
-    return response.data; // Returns embedding as an array
+    return response.data; 
   } catch (error) {
     console.error("Error generating embedding from Hugging Face API:", error);
     throw error;
